@@ -2,7 +2,7 @@ import { FaFilter } from "react-icons/fa";
 
 const Filter = () => {
   return (
-    <div className="w-1/6 bg-white drop-shadow-lg">
+    <div className="w-80 bg-white drop-shadow-lg">
         <div className="flex justify-between items-center px-5 h-10">
             <p>Filter</p>
              <FaFilter />
