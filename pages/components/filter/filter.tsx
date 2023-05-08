@@ -1,6 +1,6 @@
 import { FaFilter } from "react-icons/fa";
 
-const Filter = ({ setBrand, setCategory, setPrice }: { setBrand: any, setCategory: any, setPrice: any }) => {
+const Filter = ({ setBrand, setCategory, setMinPrice, setMaxPrice }: { setBrand: any, setCategory: any, setMinPrice: any, setMaxPrice: any }) => {
     const handleChange = (e: any) => {
         setBrand((prev: any) => {
             if (e.target.checked) {
@@ -21,12 +21,6 @@ const Filter = ({ setBrand, setCategory, setPrice }: { setBrand: any, setCategor
     }
 
     const handlePrice = (e: any) => {
-        setPrice((pre: any) => {
-            if (e.target.checked) {
-                return [...pre, e.target.value]
-            }
-            return pre.filter((item: any) => item !== e.target.value)
-        })
 
     }
     return (

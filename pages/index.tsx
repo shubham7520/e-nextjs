@@ -11,7 +11,8 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState([]);
   const [brand, setBrand] = useState([]);
-  const [price, setPrice] = useState([]);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(99999);
 
   return (
     <main
@@ -22,8 +23,8 @@ export default function Home() {
 
         <div className='flex justify-center mt-8 mb-10 gap-5 w-4/5'>
           <div>
-            <Filter setBrand={setBrand} setCategory={setCategory} setPrice={setPrice} /></div>
-          <div><FirstPage search={search} brand={brand} category={category} price={price} /></div>
+            <Filter setBrand={setBrand} setCategory={setCategory} setMinPrice={setMinPrice} setMaxPrice={setMaxPrice} /></div>
+          <div><FirstPage search={search} brand={brand} category={category} minPrice={minPrice} maxPrice={maxPrice} /></div>
         </div>
       </div>
     </main>

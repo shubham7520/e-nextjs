@@ -1,7 +1,7 @@
 import Cart from "./cart";
 import Data from "../data";
 
-function Home({ search, brand, category, price }: { search: any, brand: any, category: any, price: any }) {
+function Home({ search, brand, category, minPrice, maxPrice }: { search: any, brand: any, category: any, minPrice: any, maxPrice: any }) {
     // Include all elements which includes the search query
     let updatedList = Data.filter((item) => {
         return item.item.toLowerCase().indexOf(search.toLowerCase()) !== -1;
